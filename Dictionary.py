@@ -51,7 +51,9 @@ while True:
 1. Display the words starts with a specific letter
 2. Find specific word and its meaning
 3. Search and display words by given value of letters
-4. Exit
+4. Add a word to the dictionary
+5. Update meaning of the word in the dictionary
+6. Exit
 =========================================================
         """)
         choice = int(input("What you want to do (1-4): "))
