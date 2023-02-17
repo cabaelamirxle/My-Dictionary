@@ -41,6 +41,27 @@ def specificNumber():
     if found == False:
         print("No words with specific length")
 
+#function 4
+def addWord():
+    word = input("Enter the word you want to add: ").lower()
+    if word in data:
+        print("{} is already in the dictionary. \nIf you wish to update the meaning, press 3.".format(word))
+    else:
+        meaning = input("Enter the meaning of {}: ".format(word))
+        data[word] = meaning
+        print("The word added successfully!")
+
+#function 5
+def addMeaning():
+    word = input("Enter the word you want to update: ").lower()
+    if word in data:
+        meaning = input("Enter the meaning of {}: ".format(word))
+        data[word] = meaning
+        print("The word added successfully!")
+        
+    else:
+        print("{} is not in the dictionary. \nIf you wish to add the word, press 2.".format(word))
+
 #Choices
 while True:
     try:
@@ -64,6 +85,10 @@ while True:
         elif choice == 3:
             specificNumber()
         elif choice == 4:
+            addWord()
+        elif choice == 5:
+            addMeaning()
+        elif choice == 6:
             break
         else:
             print("Invalid input! Enter number from 1-4: ")
